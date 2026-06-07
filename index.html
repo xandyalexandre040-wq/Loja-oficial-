@@ -5,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ofertas Exclusivas - Tecnologia & Performance</title>
     <style>
-        /* RESET E VARIÁVEIS */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
         }
-
         :root {
             --bg-color: #0b0f19;
             --card-bg: #1e293b;
@@ -22,210 +20,34 @@
             --accent-gradient: linear-gradient(135deg, #00ff87 0%, #60efff 100%);
             --btn-hover: #00e676;
         }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* HEADER / HERO */
-        header {
-            background: linear-gradient(180deg, rgba(30, 41, 59, 0.8) 0%, rgba(11, 15, 25, 1) 100%);
-            padding: 80px 20px;
-            text-align: center;
-            border-bottom: 1px solid #2d3748;
-        }
-
-        .badge {
-            background: var(--accent-gradient);
-            color: #000;
-            padding: 6px 16px;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-
-        header h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 15px;
-            letter-spacing: -1px;
-            background: var(--accent-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        header p {
-            color: var(--text-muted);
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* VITRINE DE PRODUTOS */
-        .container {
-            max-width: 1200px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
-
-        .grid-produtos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .card-produto {
-            background-color: var(--card-bg);
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid #2d3748;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .card-produto:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 255, 135, 0.1);
-            border-color: #4a5568;
-        }
-
-        .img-container {
-            width: 100%;
-            height: 250px;
-            background-color: #151f32;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .img-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .card-produto:hover .img-container img {
-            transform: scale(1.05);
-        }
-
-        .info-produto {
-            padding: 25px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .info-produto h2 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            font-weight: 600;
-            color: var(--text-main);
-        }
-
-        .info-produto p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 20px;
-            height: 60px;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        .preco-box {
-            margin-bottom: 20px;
-        }
-
-        .preco-antigo {
-            font-size: 0.85rem;
-            color: #718096;
-            text-decoration: line-through;
-            display: block;
-        }
-
-        .preco-novo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--accent-color);
-        }
-
-        /* BOTÃO DE COMPRA */
-        .btn-compra {
-            display: block;
-            text-align: center;
-            background: var(--accent-gradient);
-            color: #010409;
-            text-decoration: none;
-            padding: 14px;
-            border-radius: 8px;
-            font-weight: 700;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 0.5px;
-            transition: opacity 0.2s ease, filter 0.2s ease;
-        }
-
-        .btn-compra:hover {
-            filter: brightness(1.1);
-        }
-
-        /* BENEFÍCIOS DO SITE */
-        .beneficios {
-            background-color: #111827;
-            padding: 40px 20px;
-            border-top: 1px solid #2d3748;
-            border-bottom: 1px solid #2d3748;
-            text-align: center;
-        }
-
-        .beneficios-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-
-        .beneficio-item h3 {
-            color: var(--accent-color);
-            margin-bottom: 5px;
-            font-size: 1.1rem;
-        }
-
-        .beneficio-item p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
-        /* FOOTER */
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            color: #4a5568;
-            font-size: 0.85rem;
-        }
-
+        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
+        header { background: linear-gradient(180deg, rgba(30, 41, 59, 0.8) 0%, rgba(11, 15, 25, 1) 100%); padding: 80px 20px; text-align: center; border-bottom: 1px solid #2d3748; }
+        .badge { background: var(--accent-gradient); color: #000; padding: 6px 16px; border-radius: 50px; font-weight: bold; font-size: 0.85rem; text-transform: uppercase; display: inline-block; margin-bottom: 20px; }
+        header h1 { font-size: 3rem; font-weight: 800; margin-bottom: 15px; letter-spacing: -1px; background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        header p { color: var(--text-muted); font-size: 1.2rem; max-width: 600px; margin: 0 auto; }
+        .container { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
+        .grid-produtos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card-produto { background-color: var(--card-bg); border-radius: 16px; overflow: hidden; border: 1px solid #2d3748; transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; justify-content: space-between; }
+        .card-produto:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 255, 135, 0.1); border-color: #4a5568; }
+        .img-container { width: 100%; height: 250px; background-color: #151f32; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
+        .img-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
+        .card-produto:hover .img-container img { transform: scale(1.05); }
+        .info-produto { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .info-produto h2 { font-size: 1.3rem; margin-bottom: 10px; font-weight: 600; color: var(--text-main); }
+        .info-produto p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; height: 60px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+        .preco-box { margin-bottom: 20px; }
+        .preco-antigo { font-size: 0.85rem; color: #718096; text-decoration: line-through; display: block; }
+        .preco-novo { font-size: 1.8rem; font-weight: 700; color: var(--accent-color); }
+        .btn-compra { display: block; text-align: center; background: var(--accent-gradient); color: #010409; text-decoration: none; padding: 14px; border-radius: 8px; font-weight: 700; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.5px; transition: opacity 0.2s ease, filter 0.2s ease; }
+        .btn-compra:hover { filter: brightness(1.1); }
+        .beneficios { background-color: #111827; padding: 40px 20px; border-top: 1px solid #2d3748; border-bottom: 1px solid #2d3748; text-align: center; }
+        .beneficios-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .beneficio-item h3 { color: var(--accent-color); margin-bottom: 5px; font-size: 1.1rem; }
+        .beneficio-item p { color: var(--text-muted); font-size: 0.9rem; }
+        footer { text-align: center; padding: 40px 20px; color: #4a5568; font-size: 0.85rem; }
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.2rem;
-            }
-            .grid-produtos {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
+            header h1 { font-size: 2.2rem; }
+            .grid-produtos { grid-template-columns: 1fr; gap: 20px; }
         }
     </style>
 </head>
@@ -239,28 +61,18 @@
 
     <section class="beneficios">
         <div class="beneficios-grid">
-            <div class="beneficio-item">
-                <h3>Compra 100% Segura</h3>
-                <p>Intermediação oficial Mercado Livre</p>
-            </div>
-            <div class="beneficio-item">
-                <h3>Envio Rápido</h3>
-                <p>Receba no conforto da sua casa</p>
-            </div>
-            <div class="beneficio-item">
-                <h3>Garantia Total</h3>
-                <p>Satisfação ou seu dinheiro de volta</p>
-            </div>
+            <div class="beneficio-item"><h3>Compra 100% Segura</h3><p>Intermediação oficial Mercado Livre</p></div>
+            <div class="beneficio-item"><h3>Envio Rápido</h3><p>Receba no conforto da sua casa</p></div>
+            <div class="beneficio-item"><h3>Garantia Total</h3><p>Satisfação ou seu dinheiro de volta</p></div>
         </div>
     </section>
 
     <main class="container">
         <div class="grid-produtos">
 
-            <!-- Produto 1 -->
             <div class="card-produto">
                 <div class="img-container">
-                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_869109-MLA100029899343_122025-V.webp" alt="Pipoqueira Elétrica Poplite Britânia">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_869109-MLA100029899343_122025-V.webp" alt="Pipoqueira Elétrica Poplite Britânia 1200W">
                 </div>
                 <div class="info-produto">
                     <div>
@@ -269,18 +81,17 @@
                     </div>
                     <div>
                         <div class="preco-box">
-                            <span class="preco-antigo">R$ 599,00</span>
-                            <span class="preco-novo">R$ 399,00</span>
+                            <span class="preco-antigo">R$ 149,00</span>
+                            <span class="preco-novo">R$ 122,18</span>
                         </div>
                         <a href="https://meli.la/18qVjmA" target="_blank" class="btn-compra">Comprar no Mercado Livre</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Produto 2 -->
             <div class="card-produto">
                 <div class="img-container">
-                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_748538-MLB106283968082_022026-V.webp" alt="Papel Higiênico Rolão 250m">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_748538-MLB106283968082_022026-V.webp" alt="Papel Higiênico Rolão 250m c/8 Rolos">
                 </div>
                 <div class="info-produto">
                     <div>
@@ -289,18 +100,17 @@
                     </div>
                     <div>
                         <div class="preco-box">
-                            <span class="preco-antigo">R$ 299,00</span>
-                            <span class="preco-novo">R$ 189,00</span>
+                            <span class="preco-antigo">R$ 89,37</span>
+                            <span class="preco-novo">R$ 84,90</span>
                         </div>
                         <a href="https://meli.la/2Xw3jbz" target="_blank" class="btn-compra">Comprar no Mercado Livre</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Produto 3 -->
             <div class="card-produto">
                 <div class="img-container">
-                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_714921-MLB110958194809_042026-V-creatina-monohidratada-micronizada-1kg-shambala-nutrico.webp" alt="Creatina Monohidratada 1kg Shambala">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_714921-MLB110958194809_042026-V-creatina-monohidratada-micronizada-1kg-shambala-nutrico.webp" alt="Creatina Monohidratada Micronizada 1kg Shambala">
                 </div>
                 <div class="info-produto">
                     <div>
@@ -309,18 +119,17 @@
                     </div>
                     <div>
                         <div class="preco-box">
-                            <span class="preco-antigo">R$ 1.200,00</span>
-                            <span class="preco-novo">R$ 849,00</span>
+                            <span class="preco-antigo"></span>
+                            <span class="preco-novo">R$ 69,75</span>
                         </div>
                         <a href="https://meli.la/2kvx4Lo" target="_blank" class="btn-compra">Comprar no Mercado Livre</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Produto 4 -->
             <div class="card-produto">
                 <div class="img-container">
-                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_799941-MLA104775545389_012026-V.webp" alt="Mouse Sem Fio Recarregável LED RGB">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_799941-MLA104775545389_012026-V.webp" alt="Mouse Sem Fio Recarregável LED RGB Silencioso">
                 </div>
                 <div class="info-produto">
                     <div>
@@ -329,18 +138,17 @@
                     </div>
                     <div>
                         <div class="preco-box">
-                            <span class="preco-antigo">R$ 150,00</span>
-                            <span class="preco-novo">R$ 99,90</span>
+                            <span class="preco-antigo">R$ 32,90</span>
+                            <span class="preco-novo">R$ 22,81</span>
                         </div>
                         <a href="https://meli.la/2k3umbC" target="_blank" class="btn-compra">Comprar no Mercado Livre</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Produto 5 -->
             <div class="card-produto">
                 <div class="img-container">
-                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_878784-MLA106811094849_022026-V.webp" alt="Mixer Elétrico Portátil 2 em 1 Woosh">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_878784-MLA106811094849_022026-V.webp" alt="Mixer Elétrico Portátil 2 em 1 Recarregável Woosh">
                 </div>
                 <div class="info-produto">
                     <div>
@@ -349,15 +157,14 @@
                     </div>
                     <div>
                         <div class="preco-box">
-                            <span class="preco-antigo">R$ 450,00</span>
-                            <span class="preco-novo">R$ 299,00</span>
+                            <span class="preco-antigo">R$ 49,99</span>
+                            <span class="preco-novo">R$ 19,00</span>
                         </div>
                         <a href="https://meli.la/2qShunt" target="_blank" class="btn-compra">Comprar no Mercado Livre</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Produto 6 -->
             <div class="card-produto">
                 <div class="img-container">
                     <img src="https://http2.mlstatic.com/D_Q_NP_2X_762912-MLA105696431793_012026-V.webp" alt="Controle Sem Fio Joystick Bluetooth PS4 Redfin">
@@ -370,14 +177,13 @@
                     <div>
                         <div class="preco-box">
                             <span class="preco-antigo">R$ 89,90</span>
-                            <span class="preco-novo">R$ 59,90</span>
+                            <span class="preco-novo">R$ 54,88</span>
                         </div>
                         <a href="https://meli.la/2S7E1Za" target="_blank" class="btn-compra">Comprar no Mercado Livre</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Produto 7 -->
             <div class="card-produto">
                 <div class="img-container">
                     <img src="https://http2.mlstatic.com/D_Q_NP_2X_749505-MLA112192059815_052026-V.webp" alt="Massageador Pistola Elétrica Profissional Micgeek">
@@ -389,18 +195,17 @@
                     </div>
                     <div>
                         <div class="preco-box">
-                            <span class="preco-antigo">R$ 350,00</span>
-                            <span class="preco-novo">R$ 219,00</span>
+                            <span class="preco-antigo">R$ 57,40</span>
+                            <span class="preco-novo">R$ 34,44</span>
                         </div>
                         <a href="https://meli.la/2h2jR17" target="_blank" class="btn-compra">Comprar no Mercado Livre</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Produto 8 -->
             <div class="card-produto">
                 <div class="img-container">
-                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_987491-CBT109089188669_032026-V.webp" alt="Pipoqueira Elétrica Sem Óleo Saudável">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_987491-CBT109089188669_032026-V.webp" alt="Máquina de Pipoca Elétrica Sem Óleo">
                 </div>
                 <div class="info-produto">
                     <div>
@@ -409,8 +214,8 @@
                     </div>
                     <div>
                         <div class="preco-box">
-                            <span class="preco-antigo">R$ 799,00</span>
-                            <span class="preco-novo">R$ 549,00</span>
+                            <span class="preco-antigo">R$ 65,64</span>
+                            <span class="preco-novo">R$ 62,33</span>
                         </div>
                         <a href="https://meli.la/19LLWXQ" target="_blank" class="btn-compra">Comprar no Mercado Livre</a>
                     </div>
